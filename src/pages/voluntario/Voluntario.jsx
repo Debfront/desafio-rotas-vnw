@@ -1,11 +1,11 @@
-//import s from './voluntario.module.scss'
+// //import s from './voluntario.module.scss'
 
-const Vonluntario = () => {
-  return (
-    <section>
-      <h1>Desenvolver página de voluntário</h1>
-    </section>
-  )
-}
+// const Voluntary = () => {
+//   return (
+//     <main>
+//       <h1>Voluntario</h1>
+//     </main>
+//   );
+// };
 
-export default Vonluntario
+// export default Voluntary;
