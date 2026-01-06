@@ -4,38 +4,55 @@ import s from "./header.module.scss";
 import PrimaryButton from "../primary-button/PrimaryButton";
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+
+  const toggleMenu = () => {
+    setIsMenuOpen((current) => !current);
+  };
+
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className={s.header}>
+   
       <div className={s.headerTitle}>
-        <img src="/coracao.png" />
-        <Link className={s.linkHome} to="/" onClick={() => setOpen(false)}>
+        <img src="/coracao.png" alt="Coração" />
+
+        <Link className={s.linkHome} to="/" onClick={closeMenu}>
           Médicos & Dentistas
         </Link>
       </div>
 
+    
       <button
         className={s.burger}
-        aria-label={open ? "Fechar menu" : "Abrir menu"}
-        aria-expanded={open}
-        onClick={() => setOpen((v) => !v)}
+        aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+        aria-expanded={isMenuOpen}
+        onClick={toggleMenu}
       >
         <span className={s.burgerLine} />
         <span className={s.burgerLine} />
         <span className={s.burgerLine} />
       </button>
 
-      <nav className={`${s.headerLinks} ${open ? s.open : ""}`}>
-        <Link className={s.linkHome} to="/" onClick={() => setOpen(false)}>
+     
+      <nav className={`${s.headerLinks} ${isMenuOpen ? s.open : ""}`}>
+        <Link className={s.linkHome} to="/" onClick={closeMenu}>
           Home
         </Link>
-        <span onClick={() => setOpen(false)}>
+
+        <span onClick={closeMenu}>
           <PrimaryButton to="/voluntary" title="Seja voluntário" />
         </span>
       </nav>
 
-      {open && <div className={s.backdrop} onClick={() => setOpen(false)} />}
+    
+      {isMenuOpen && <div className={s.backdrop} onClick={closeMenu} />}
     </header>
   );
 };
