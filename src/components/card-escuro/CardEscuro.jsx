@@ -1,6 +1,6 @@
-import s from "./cardBlack.module.scss";
+import s from "./cardEscuro.module.scss";
 
-const CardBlack = ({ title, content }) => {
+const CardEscuro = ({ title, content }) => {
   return (
     <article className={s.cardBlack}>
       <h3>{title}</h3>
@@ -9,4 +9,4 @@ const CardBlack = ({ title, content }) => {
   );
 };
 
-export default CardBlack;
+export default CardEscuro;

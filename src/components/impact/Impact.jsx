@@ -1,4 +1,5 @@
-import CardBlack from "../card-black/CardBlack";
+
+import CardEscuro from "../card-escuro/CardEscuro";
 import s from "./impact.module.scss";
 
 const Impact = () => {
@@ -7,10 +8,10 @@ const Impact = () => {
       <h2>Nosso Impacto</h2>
       <p>Transformando a saúde de nossa comunidade, um paciente de cada vez</p>
       <div className={s.impactCardSection}>
-        <CardBlack title="2,500+" content="Pessoas Atendidas" />
-        <CardBlack title="150+" content="Profissionais Voluntários" />
-        <CardBlack title="98%" content="Satisfação dos Pacientes" />
-        <CardBlack title="5+" content="Anos de Dedicação" />
+        <CardEscuro title="2,500+" content="Pessoas Atendidas" />
+        <CardEscuro title="150+" content="Profissionais Voluntários" />
+        <CardEscuro title="98%" content="Satisfação dos Pacientes" />
+        <CardEscuro title="5+" content="Anos de Dedicação" />
       </div>
     </section>
   );

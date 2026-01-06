@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <section className={s.mainContainer}>
       <section className={s.textSection}>
-        <div className={s.mainBudget}>
+        <div className={s.mainImg}>
           <img src="/Frame.png" alt="icone de um aparelho de médico" />
           <p>Saúde para todos</p>
         </div>

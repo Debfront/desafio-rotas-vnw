@@ -6,11 +6,13 @@
   color: white;
   text-decoration: none;
   font-weight: bold;
+
 }
 
 @media (max-width: 480px) {
   .primaryButton {
     padding: 0.7rem 1rem;
     font-size: 0.95rem;
+    text-align: center;
   }
 }
