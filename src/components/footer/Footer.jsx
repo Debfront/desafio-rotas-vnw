@@ -22,7 +22,7 @@ const Footer = () => {
             <p>contato@medico-dentista.org</p>
           </div>
           <div className={s.footerContactContainerContacts}>
-            <img src="/phone.png" alt="icone de telefone" />
+            <img src="/tell.png" alt="icone de telefone" />
             <p>(11) 3000-0000</p>
           </div>
           <div className={s.footerContactContainerContacts}>
