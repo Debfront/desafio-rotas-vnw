@@ -1,10 +1,16 @@
 
 
+import Impact from "../../components/impact/Impact";
+import Main from "../../components/main/Main";
+import Mission from "../../components/mission/Mission";
+
 const Home = () => {
   return (
-    <>
-        <h1>teste home</h1>
-    </>
+    <main>
+      <Main />
+      <Mission />
+      <Impact />
+    </main>
   );
 };
 

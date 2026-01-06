@@ -1,22 +1,125 @@
 header {
   display: flex;
-  padding: 25px 28px;
+  padding: 1.563rem 1.75rem;
 
   justify-content: space-between;
 
   .headerTitle {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
   }
 
   .headerLinks {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     align-items: center;
   }
   .linkHome {
     font-weight: 400;
     text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  header .headerLinks {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.75rem 0.75rem;
+  }
+  header .headerTitle {
+    font-size: 0.95rem;
+  }
+  header .headerLinks {
+    gap: 0.5rem;
+  }
+}
+
+/* estilos do menu hambúrguer */
+header {
+  .burger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .burgerLine {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #000;
+    margin: 4px 0;
+  }
+  .backdrop {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    .burger {
+      display: block;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      z-index: 50;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+    .headerLinks {
+      display: none;
+    }
+    .open {
+      display: flex !important;
+      flex-direction: column;
+      position: absolute;
+      top: 64px;
+      right: 1rem;
+      width: min(92vw, 360px);
+      min-width: 220px;
+      background: white;
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+      z-index: 60;
+      gap: 0.75rem;
+      align-items: stretch;
+      justify-content: center;
+    }
+    .backdrop {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 40;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    .burger {
+      right: 0.75rem;
+      top: 0.75rem;
+      padding: 0.6rem;
+    }
+    .open {
+      right: 0.5rem;
+      top: 56px;
+      width: min(96vw, 340px);
+      padding: 0.9rem 1rem;
+    }
   }
 }

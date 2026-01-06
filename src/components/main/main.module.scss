@@ -1,0 +1,117 @@
+.mainContainer {
+  border-top: 2px solid black;
+
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  margin-bottom: 9.375rem;
+
+  section {
+    width: 35rem;
+    display: flex;
+    gap: 3.125rem;
+    flex-direction: column;
+
+    .mainBudget {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 50%;
+
+      padding: 0.813rem 0.75rem;
+      border-radius: 3.438rem;
+      background-color: #e5e5e5;
+    }
+
+    h1 {
+      font-size: 4.188rem;
+      text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      font-size: 1.563rem;
+    }
+
+    .mainBtn {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+
+      .mainBtnDotted {
+        padding: 1rem 2.625rem;
+        border: 1px solid #00745a;
+        border-radius: 0.75rem;
+        text-decoration: none;
+        color: #00745a;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .textSection {
+    width: 100%;
+  }
+
+  .imageSection {
+    display: none;
+    visibility: hidden;
+  }
+  .doctorImage {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 0.75rem;
+    margin-bottom: 4rem;
+  }
+  .mainContainer section {
+    width: 100%;
+    gap: 2rem;
+  }
+  .mainContainer section h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .mainContainer section p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .mainContainer section .mainBtn {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: stretch;
+  }
+  .mainContainer section .mainBudget {
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 0.7rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    padding: 0.5rem 0.4rem;
+    margin-bottom: 2rem;
+  }
+  .mainContainer section {
+    gap: 1rem;
+  }
+  .mainContainer section h1 {
+    font-size: 1.3rem;
+  }
+  .mainContainer section p {
+    font-size: 0.95rem;
+  }
+  .mainContainer section .mainBtnDotted {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}

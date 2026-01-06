@@ -1,0 +1,51 @@
+.missionSection {
+  padding: 5rem 5.625rem;
+  background-color: #00745a;
+
+  h2 {
+    font-size: 3.75rem;
+    color: white;
+    margin-bottom: 1.938rem;
+  }
+
+  p {
+    color: white;
+    font-size: 1.438rem;
+    margin-bottom: 3rem;
+  }
+
+  .missionCardSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.063rem;
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 768px) {
+  .missionSection {
+    padding: 2.5rem 1.25rem;
+  }
+  .missionSection h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .missionSection p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .missionCardSection {
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .missionSection h2 {
+    font-size: 1.5rem;
+  }
+  .missionSection p {
+    font-size: 0.95rem;
+  }
+}

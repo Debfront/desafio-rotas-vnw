@@ -1,0 +1,49 @@
+.impactSection {
+  padding: 5rem 5.625rem;
+
+  h2 {
+    font-size: 3.75rem;
+    color: black;
+    margin-bottom: 1.938rem;
+  }
+
+  p {
+    color: black;
+    font-size: 1.438rem;
+    margin-bottom: 3rem;
+  }
+
+  .impactCardSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 768px) {
+  .impactSection {
+    padding: 2.5rem 1.25rem;
+  }
+  .impactSection h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .impactSection p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .impactCardSection {
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .impactSection h2 {
+    font-size: 1.5rem;
+  }
+  .impactSection p {
+    font-size: 0.95rem;
+  }
+}
